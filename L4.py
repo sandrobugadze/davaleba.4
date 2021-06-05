@@ -16,8 +16,8 @@ file_obj.writerow(['modeli', 'fasi'])
 while item < 6:
     url=f'https://technoshop.ge/index.php?route=product/category&path=56&page={item}'
     pasuxi=requests.get(url)
-    content=pasuxi.text
-    soup=bs4.BeautifulSoup(content, 'html.parser')
+    noc=pasuxi.text
+    soup=bs4.BeautifulSoup(noc, 'html.parser')
     yvelaferi=soup.find('div',{'class':'products-list row grid'})
     erticali=yvelaferi.find_all('div', {'class': 'product-layout'})
     for each in erticali:
